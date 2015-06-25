@@ -18,18 +18,18 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # Inherit APNs list
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/axxion/config/gsm.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/axxion/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/hammerhead/device.mk)
 
-PRODUCT_NAME := omni_hammerhead
+PRODUCT_NAME := axxion_hammerhead
 PRODUCT_DEVICE := hammerhead
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5
@@ -41,4 +41,4 @@ TARGET_KERNEL_CONFIG := custom_hammerhead_defconfig
 TARGET_VARIANT_CONFIG := custom_hammerhead_defconfig
 TARGET_SELINUX_CONFIG := custom_hammerhead_defconfig
 
-$(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
