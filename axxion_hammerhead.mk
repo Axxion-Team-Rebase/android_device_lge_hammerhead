@@ -28,7 +28,7 @@ $(call inherit-product, vendor/axxion/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/hammerhead/device.mk)
-
+    
 PRODUCT_NAME := axxion_hammerhead
 PRODUCT_DEVICE := hammerhead
 PRODUCT_BRAND := google
@@ -40,5 +40,7 @@ TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 TARGET_KERNEL_CONFIG := custom_hammerhead_defconfig
 TARGET_VARIANT_CONFIG := custom_hammerhead_defconfig
 TARGET_SELINUX_CONFIG := custom_hammerhead_defconfig
+
+TARGET_BOOTANIMATION_SIZE := 1080
 
 $(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
